@@ -12,9 +12,15 @@
 		9CC90FF21E3061EE0034E996 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CC90FF01E3061EE0034E996 /* Main.storyboard */; };
 		9CC90FF41E3061EE0034E996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CC90FF31E3061EE0034E996 /* Assets.xcassets */; };
 		9CC90FF71E3061EE0034E996 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CC90FF51E3061EE0034E996 /* LaunchScreen.storyboard */; };
+		9CC910001E3062820034E996 /* WDTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC90FFF1E3062820034E996 /* WDTableView.swift */; };
+		9CC910031E3068660034E996 /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC910011E3068660034E996 /* TestTableViewCell.swift */; };
+		9CC910041E3068660034E996 /* TestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC910021E3068660034E996 /* TestTableViewCell.xib */; };
+		AB43D7D8D1A5E2EFC0E1C8E2 /* Pods_WDTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D1D3F56A72E2B9E3E4167D /* Pods_WDTableView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03E5075F64E1D7CE1FC554FD /* Pods-WDTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WDTableView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WDTableView/Pods-WDTableView.debug.xcconfig"; sourceTree = "<group>"; };
+		5B3DF54636891791DA0ACD36 /* Pods-WDTableView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WDTableView.release.xcconfig"; path = "Pods/Target Support Files/Pods-WDTableView/Pods-WDTableView.release.xcconfig"; sourceTree = "<group>"; };
 		9CC90FE91E3061ED0034E996 /* WDTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WDTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CC90FEC1E3061ED0034E996 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CC90FEE1E3061ED0034E996 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +28,10 @@
 		9CC90FF31E3061EE0034E996 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CC90FF61E3061EE0034E996 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CC90FF81E3061EE0034E996 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CC90FFF1E3062820034E996 /* WDTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WDTableView.swift; sourceTree = "<group>"; };
+		9CC910011E3068660034E996 /* TestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
+		9CC910021E3068660034E996 /* TestTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestTableViewCell.xib; sourceTree = "<group>"; };
+		E7D1D3F56A72E2B9E3E4167D /* Pods_WDTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WDTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +39,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB43D7D8D1A5E2EFC0E1C8E2 /* Pods_WDTableView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		122A365530B021B0982B1E46 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				03E5075F64E1D7CE1FC554FD /* Pods-WDTableView.debug.xcconfig */,
+				5B3DF54636891791DA0ACD36 /* Pods-WDTableView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9CC90FE01E3061ED0034E996 = {
 			isa = PBXGroup;
 			children = (
 				9CC90FEB1E3061ED0034E996 /* WDTableView */,
 				9CC90FEA1E3061ED0034E996 /* Products */,
+				122A365530B021B0982B1E46 /* Pods */,
+				AA0B77B1569D3CB14523BBD0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +76,33 @@
 		9CC90FEB1E3061ED0034E996 /* WDTableView */ = {
 			isa = PBXGroup;
 			children = (
+				9CC90FFE1E3062610034E996 /* WDTableView */,
 				9CC90FEC1E3061ED0034E996 /* AppDelegate.swift */,
 				9CC90FEE1E3061ED0034E996 /* ViewController.swift */,
 				9CC90FF01E3061EE0034E996 /* Main.storyboard */,
 				9CC90FF31E3061EE0034E996 /* Assets.xcassets */,
 				9CC90FF51E3061EE0034E996 /* LaunchScreen.storyboard */,
 				9CC90FF81E3061EE0034E996 /* Info.plist */,
+				9CC910011E3068660034E996 /* TestTableViewCell.swift */,
+				9CC910021E3068660034E996 /* TestTableViewCell.xib */,
 			);
 			path = WDTableView;
+			sourceTree = "<group>";
+		};
+		9CC90FFE1E3062610034E996 /* WDTableView */ = {
+			isa = PBXGroup;
+			children = (
+				9CC90FFF1E3062820034E996 /* WDTableView.swift */,
+			);
+			path = WDTableView;
+			sourceTree = "<group>";
+		};
+		AA0B77B1569D3CB14523BBD0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7D1D3F56A72E2B9E3E4167D /* Pods_WDTableView.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +112,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9CC90FFB1E3061EE0034E996 /* Build configuration list for PBXNativeTarget "WDTableView" */;
 			buildPhases = (
+				ABDD7A52F73DC50860688F39 /* [CP] Check Pods Manifest.lock */,
 				9CC90FE51E3061ED0034E996 /* Sources */,
 				9CC90FE61E3061ED0034E996 /* Frameworks */,
 				9CC90FE71E3061ED0034E996 /* Resources */,
+				B2AE672AB2453A71E17CA559 /* [CP] Embed Pods Frameworks */,
+				889251775337246FCDBDDAE7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CC90FF71E3061EE0034E996 /* LaunchScreen.storyboard in Resources */,
+				9CC910041E3068660034E996 /* TestTableViewCell.xib in Resources */,
 				9CC90FF41E3061EE0034E996 /* Assets.xcassets in Resources */,
 				9CC90FF21E3061EE0034E996 /* Main.storyboard in Resources */,
 			);
@@ -132,12 +177,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		889251775337246FCDBDDAE7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WDTableView/Pods-WDTableView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABDD7A52F73DC50860688F39 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B2AE672AB2453A71E17CA559 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WDTableView/Pods-WDTableView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9CC90FE51E3061ED0034E996 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9CC90FEF1E3061ED0034E996 /* ViewController.swift in Sources */,
+				9CC910031E3068660034E996 /* TestTableViewCell.swift in Sources */,
+				9CC910001E3062820034E996 /* WDTableView.swift in Sources */,
 				9CC90FED1E3061ED0034E996 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,27 +352,31 @@
 		};
 		9CC90FFC1E3061EE0034E996 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03E5075F64E1D7CE1FC554FD /* Pods-WDTableView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NNX64Q93BU;
 				INFOPLIST_FILE = WDTableView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = WD.WDTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
 		9CC90FFD1E3061EE0034E996 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B3DF54636891791DA0ACD36 /* Pods-WDTableView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = NNX64Q93BU;
 				INFOPLIST_FILE = WDTableView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = WD.WDTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
