@@ -52,11 +52,13 @@ class ViewController: UIViewController {
 class Contrast: NSObject {
     var chinese = ""
     var english = ""
+    var rowHeight: CGFloat = 0
     
     class func creat(c: String, e: String) -> Contrast{
         let con = Contrast()
         con.chinese = c
         con.english = e
+        con.rowHeight = CGFloat(NSString(string: c).floatValue) * 44
         return con
     }
     

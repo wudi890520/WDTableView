@@ -231,10 +231,28 @@ extension WDTableView {
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        guard
+            let anyModel: AnyObject? = dataSourceArray[indexPath.row],
+            let rowHeight = anyModel!.valueForKeyPath("rowHeight")
+        else {
+            return WDRowHeight
+        }
+        
+        if rowHeight as! CGFloat > 0 {
+            return rowHeight as! CGFloat
+        }
+        
         return WDRowHeight
     }
     
     func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        let anyModel = dataSourceArray[indexPath.row]
+        if anyModel.valueForKeyPath("rowHeight") != nil {
+            return anyModel.valueForKeyPath("rowHeight") as! CGFloat
+        }
+        
         return WDRowHeight
     }
     
