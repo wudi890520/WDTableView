@@ -10,8 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let editButtons = [WDEditButtonTitle(title: "删除"),
+                       WDEditButtonTitle(title: "编辑", style: .Normal)]
+    
     let tableView = WDTableView.withNib("TestTableViewCell")
-    let titles: [String] = ["1","水电费水电费","地方","改好","3434收到","的点点滴滴"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +24,7 @@ class ViewController: UIViewController {
         .selected {
             (tableView, indexPath) in
             print(indexPath)
-        }.edit([WDEditButtonTitle(title: "删除"),
-                WDEditButtonTitle(title: "编辑", style: .Normal)]) {
+        }.edit(editButtons) {
                     (tableView, titleIndex, indexPath) in
             print(titleIndex)
             print(indexPath)
@@ -58,7 +59,7 @@ class Contrast: NSObject {
         let con = Contrast()
         con.chinese = c
         con.english = e
-        con.rowHeight = CGFloat(NSString(string: c).floatValue) * 44
+        con.rowHeight = CGFloat(NSString(string: c).floatValue % 4) * 44
         return con
     }
     
